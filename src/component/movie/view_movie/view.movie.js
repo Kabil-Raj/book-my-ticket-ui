@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useLocation, useNavigate, Navigate } from 'react-router-dom';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import movieService from '../../authentication/movie.service';
 import authenticationService from '../../authentication/authentication.service';
 

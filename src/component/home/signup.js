@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Route, Router, Routes, Link } from 'react-router-dom';
 import BookMyTicketLoginService from "../authentication/authentication.service";
 import { Alert } from 'react-bootstrap';
 import FormInput from './FormInput';
@@ -27,7 +26,7 @@ export default class SignUp extends Component {
         event.preventDefault();
             BookMyTicketLoginService.saveUserRegistration(this.state)
             .then(response => {
-                if (response.status == 200) {
+                if (response.status === 200) {
                     this.setState({
                         isRegistrationSuccessful: true
                     })

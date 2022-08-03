@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
     const [ movies, setMovies ] = useState([])
 
-    const [imageWidth, setImageWidth] = useState(230)
+    const imageWidth = useState(230)
 
     const movieContainer = useRef();
 
@@ -45,13 +45,16 @@ import { Link } from 'react-router-dom';
                 movieContainer.current.style.transform = `translateX(${-imageWidth + distance}px)`
             }
         }
-        
-      
     }
 
+    
+
       useEffect(() => {
-        setMovies(props.movies)
-    },[movies])
+        const assignMovie = () => {
+            setMovies(props.movies)
+        }
+        assignMovie()
+     })
 
     return (
         <div className="movie-genre-container-with-scroll" onPointerEnter={handleSwitchOnEnter} onPointerLeave={handleSwitchOnLeave}>

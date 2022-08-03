@@ -6,10 +6,6 @@ import movieService from "../authentication/movie.service";
 import { MovieShowcase } from "../movie/movies.showcase";
 
 
-const test = true;
-
-
-
 class Header extends Component {
 
 

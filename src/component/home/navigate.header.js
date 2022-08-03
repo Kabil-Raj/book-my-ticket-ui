@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Movie from '../movie/movie';
-import Event from '../events/event.component';
+import { BrowserRouter as Link } from 'react-router-dom';
 
 export default class NavigateHeader extends Component {
     render() {

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import movieService from "../authentication/movie.service";
-import Header from "../home/header";
-import { MovieFn, MovieShowcase } from "./movies.showcase";
-import MovieGenre from "./movies.genre";
+import { MovieShowcase } from "./movies.showcase";
 
 export default class Movie extends Component {
 

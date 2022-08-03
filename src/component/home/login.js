@@ -28,7 +28,7 @@ export default function Login() {
                 navigate("/",{replace : true})
             }
         }
-    },[isUserLogged])
+    })
 
     const login = (e) => {
         e.preventDefault();
@@ -84,9 +84,9 @@ export default function Login() {
                                 Sign In
                             </button>
                         </div>
-                        <p className="forgot-password forgot-password-text">
+                        {/* <p className="forgot-password forgot-password-text">
                             Forgot <a href="#">password?</a>
-                        </p>
+                        </p> */}
                     </form>
 
                 </div>
