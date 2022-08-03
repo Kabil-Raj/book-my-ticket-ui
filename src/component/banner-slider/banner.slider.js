@@ -1,6 +1,4 @@
 import Carousel from "react-bootstrap/Carousel";
-import { useState } from 'react';
-import { displayBanner } from "../constants/constant";
 
 
 function BannerSlider() {

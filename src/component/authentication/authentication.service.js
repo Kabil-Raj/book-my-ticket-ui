@@ -1,4 +1,3 @@
-import { configure } from "@testing-library/react";
 import axios from "axios";
 
 export const book_my_ticket_url = ""

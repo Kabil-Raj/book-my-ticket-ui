@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import authenticationService from '../authentication/authentication.service';
 
@@ -70,7 +70,7 @@ class MainHeader extends Component{
 
         this.setState ({
             isUserLogged : authenticationService.isUserLoggedIn()
-        })
+        },[this.state.isUserLogged])
 
         return (
             <div>

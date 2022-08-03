@@ -3,7 +3,6 @@ import BannerSlider from "../banner-slider/banner.slider";
 import authenticationService from "../authentication/authentication.service";
 import NavigateHeader from "./navigate.header";
 import movieService from "../authentication/movie.service";
-import MovieDisplayTemplate from "../movie/home.movie.display";
 import { MovieShowcase } from "../movie/movies.showcase";
 
 

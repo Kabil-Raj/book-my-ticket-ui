@@ -1,6 +1,5 @@
-import React, { Component, useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import ViewMovie from './view_movie/view.movie';
 
  export const  MovieShowcase = (props) =>  {
 
@@ -52,7 +51,7 @@ import ViewMovie from './view_movie/view.movie';
 
       useEffect(() => {
         setMovies(props.movies)
-    })
+    },[movies])
 
     return (
         <div className="movie-genre-container-with-scroll" onPointerEnter={handleSwitchOnEnter} onPointerLeave={handleSwitchOnLeave}>

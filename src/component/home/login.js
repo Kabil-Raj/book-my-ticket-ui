@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Alert } from "react-bootstrap";
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
-import App from "../../App";
+import { useLocation, useNavigate } from "react-router-dom";
 import authenicationService from "../authentication/authentication.service";
-import Header from "./header";
-import MainHeader from "./main.header";
-import Home from "./main.header";
 
 
 
