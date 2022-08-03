@@ -64,7 +64,7 @@ function ViewMovie() {
                         <button >Book Ticket</button>
                     </div>
                     <div className="ticket-count">
-                        <h3> <button disabled={ticketCount == 1} onClick={decrement}>-</button> <input  value={ticketCount} readOnly={true}  type="text"  /> <button onClick={increment}>+</button> </h3> 
+                        <h3> <button disabled={ticketCount === 1} onClick={decrement}>-</button> <input  value={ticketCount} readOnly={true}  type="text"  /> <button onClick={increment}>+</button> </h3> 
                     </div>
                     <div className="pay-ticket" >
                         <button onClick={bookTicket}>Pay {ticketPrice}</button>
