@@ -12,24 +12,39 @@ body {
 }
 
 .banner-header {
+  display: flex;
+  flex-direction: row;
   margin-right: 0px;
-  justify-content: space-between;
+}
+
+
+.login-header { 
+  margin-left: 400px;
+  align-self: center;
 }
 
 .brand-name {
   width: 500px;
-  margin-right: 0px;
-  padding-right: 0%;
+  /* margin-right: 100%; */
+  margin-left: 0%;
+}
+
+.brandImage {
+  background-color: #fff;
+  border-radius: 30%;
+  margin: 10px;
+  height: 40px;
 }
 
 .search-bar {
+  margin-left: 1%;
   justify-content: center;
   width: 800px;
 }
 
 .nav-header {
   background-color: rgb(67, 67, 67);
-  justify-content: center;
+  justify-content: flex-end;
   padding-left: 500px;
 }
 
@@ -185,6 +200,7 @@ input:invalid[focused="true"]~ span {
   position: relative;
   transform: translateX(100px);
   transition: all 0.5s ease;
+
 }
 
 .movie-container-name {
@@ -219,7 +235,9 @@ input:invalid[focused="true"]~ span {
 
 
 .movie-overall img {
-  background-size: auto;
+  width: 184px;
+  height: 260px;
+  background-size: cover;
 }
 
 .movie-overall:hover {
@@ -229,7 +247,7 @@ input:invalid[focused="true"]~ span {
 
 .movie-information {
   background-color: #212529;
-  width: 100%;
+  width: 184px;
   height: 50px;
   overflow: hidden;
   display: flex;
@@ -484,7 +502,44 @@ input:invalid[focused="true"]~ span {
   display: flex;
   position: relative;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;  
+}
+
+.pop-overlay {
+  position: absolute;
+  width: 500px;
+  height: 340px;
+  margin-left: 40%;
+  margin-right: 50%;
+  top: 10%;
+  margin-top: 100px;
+  background-color: rgb(238, 238, 240);
+  display: flex;
+}
+
+.pop-model {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(75, 71, 75);
+  color: #fff;
+} 
+
+.pop-model span {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.pop-overlay p {
+  text-align: center;
+  margin: 30px;
+  font-size: 30px;
+}
+
+.pop-overlay button {
+  width: 100px;
+  align-self: center;
 }
 
 

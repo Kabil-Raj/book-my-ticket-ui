@@ -85,7 +85,6 @@ export default class SignUp extends Component {
                 placeholder : "Password",
                 errormessage : "Password should be 8-10 characters and include at least 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character!",
                 pattern: `^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,10}$`,
-                // `^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,10}$`
                 label : "Password",
                 required : true
             },

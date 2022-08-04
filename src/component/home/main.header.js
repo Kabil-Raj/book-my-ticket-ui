@@ -1,53 +1,48 @@
-import React, { Component } from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import authenticationService from '../authentication/authentication.service';
 
-class MainHeader extends Component{
+const MainHeader = () => {
 
-    constructor(props) {
-        super(props)
+    const [isUserLogged, setIsUerLogged] = useState(false);
 
-        this.state = {
-            isUserLogged : false
+
+
+    useEffect(() => {
+        const checkUserLogin = () => {
+            setIsUerLogged(authenticationService.isUserLoggedIn())
         }
-    }
+        checkUserLogin()
+    },[isUserLogged])
 
-    handleLogOut = () => {
+    const handleLogOut = () => {
         authenticationService.signOut();
+        setIsUerLogged(authenticationService.isUserLoggedIn());
     }
-
-    render() {
-
-        this.setState ({
-            isUserLogged : authenticationService.isUserLoggedIn()
-        },[this.state.isUserLogged])
 
         return (
             <div>
-                        
-
              <nav className="navbar navbar-expand-lg navbar-dark bg-dark banner-header">
-                 <div className="container">
-                     <Link className="navbar-brand brand-name" to={'/'} >bookMyTicket</Link>
+                 <div className="container banner-name">
+                    <Link className="navbar-brand brand-name" to={'/'} ><img className="brandImage" src="https://img.icons8.com/glyph-neue/2x/movie-projector.png" alt="brand"/>bookMyTicket</Link>
                      <input className='search-bar form-control' type='text' placeholder='Search For Movies, Events' />
                  </div>
-                 <div className="collapse navbar-collapse" id="collapsibleNavId">
+                 <div className="collapse navbar-collapse login-header" id="collapsibleNavId">
                      <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                         {!this.state.isUserLogged && <li className="nav-item active">
+                         {!isUserLogged && <li className="nav-item active">
                              <Link className="nav-link" to={'/sign-in'} >Sign In</Link>
                          </li>}
-                         {!this.state.isUserLogged && <li className="nav-item">
+                         {!isUserLogged && <li className="nav-item">
                              <Link className="nav-link" to={'/sign-up'} >Sign Up</Link>
                          </li>}
-                         {this.state.isUserLogged && <li className="nav-item active">
-                             <Link className="nav-link" to={'/'} onClick={this.handleLogOut}>Sign Out</Link>
+                         {isUserLogged && <li className="nav-item active">
+                             <Link className="nav-link" to={'/'} onClick={handleLogOut}>Sign Out</Link>
                          </li>}
                      </ul>
                  </div>
              </nav>
          </div>
         )
-    }
 }
 
 export default MainHeader;

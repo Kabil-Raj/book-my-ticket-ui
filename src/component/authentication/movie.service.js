@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const api_url = "http://localhost:8887/movies"
+const api_url = "http://localhost:80/movies"
 
 
 class MovieService {
 
     getTrendingMovies() {
-        return axios.get(api_url+"/trending/movies");      
+        return axios.get(api_url+"/trending/movies/");      
     }
 
     getMoviesByGenere(genre) {
@@ -16,7 +16,7 @@ class MovieService {
     }
 
     getMovieById(id) {
-        return axios.get(api_url +id)
+        return axios.get(api_url + "/" +id+"/")
     }
 
 }

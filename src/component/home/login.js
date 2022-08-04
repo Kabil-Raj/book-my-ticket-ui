@@ -25,7 +25,9 @@ export default function Login() {
             if(location.state?.from) {
                 navigate(location.state.from)
             } else {
-                navigate("/",{replace : true})
+                navigate("/")
+                window.location.reload()
+
             }
         }
     })

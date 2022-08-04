@@ -18,34 +18,36 @@ export default class Movie extends Component {
     }
 
     componentDidMount() {
-        this.movieGenre.forEach(element => {
-            movieService.getMoviesByGenere(element)
-                .then(response => {
-                    if (element === "action") {
-                        this.setState({
-                            action: response.data
-                        })
-                    } else if (element === "romance") {
-                        this.setState({
-                            romance: response.data
-                        })
-                    } else if (element === "sci") {
-                        this.setState({
-                            sci: response.data
-                        })
-                    } else if (element === "adventure") {
-                        this.setState({
-                            adventure: response.data
-                        })
-                    } else if (element === "drama") {
-                        this.setState({
-                            drama: response.data
-                        })
-                    }
+        movieService.getMoviesByGenere()
+            .then(response => {
+                this.setState({
+                    action : response.data
                 })
-        });
-
-
+            })
+            movieService.getMoviesByGenere()
+            .then(response => {
+                this.setState({
+                    drama : response.data
+                })
+            })
+            movieService.getMoviesByGenere()
+            .then(response => {
+                this.setState({
+                    sci : response.data
+                })
+            })
+            movieService.getMoviesByGenere()
+            .then(response => {
+                this.setState({
+                    romance : response.data
+                })
+            })
+            movieService.getMoviesByGenere()
+            .then(response => {
+                this.setState({
+                    adventure : response.data
+                })
+            })    
     }
 
     render() {
@@ -59,22 +61,21 @@ export default class Movie extends Component {
                 <div className="movie-genre-name">
                     <h2>Romance Movies</h2>
 
-                    <MovieShowcase movies={this.state.action} genreName={"Romance"} />
+                    <MovieShowcase movies={this.state.drama} genreName={"Romance"} />
                 </div>
                 <div className="movie-genre-name">
                     <h2>Drama Movies</h2>
 
-                    <MovieShowcase movies={this.state.action} genreName={"Drama"} />
+                    <MovieShowcase movies={this.state.romance} genreName={"Drama"} />
                 </div>
                 <div className="movie-genre-name">
                     <h2>Adventure Movies</h2>
 
-                    <MovieShowcase movies={this.state.action} genreName={"Adventure"} />
+                    <MovieShowcase movies={this.state.adventure} genreName={"Adventure"} />
                 </div>
                 <div className="movie-genre-name">
                     <h2>Sci-Fi Movies</h2>
-
-                    <MovieShowcase movies={this.state.action} genreName={"Scifi"} />
+                    <MovieShowcase movies={this.state.sci} genreName={"Scifi"} />
                 </div>
 
             </div>

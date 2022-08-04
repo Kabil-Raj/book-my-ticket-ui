@@ -9,14 +9,7 @@ import { Link } from 'react-router-dom';
 
     const [ movies, setMovies ] = useState([])
 
-    const imageWidth = useState(230)
-
     const movieContainer = useRef();
-
-    const movieTemplate = useRef();
-
-    const movieImage = useRef();
-
 
     const handleSwitchOnEnter = () => {
         setSliderSwitch(true)
@@ -28,21 +21,23 @@ import { Link } from 'react-router-dom';
 
     const handleSlide = (directiom) => {
         let distance = movieContainer.current.getBoundingClientRect().x
+
         if (directiom === "left" && sliderNumber > 0) {
             setSliderNumber(sliderNumber -= 1)
-            movieContainer.current.style.transform = `translateX(${imageWidth + distance}px)`
+            movieContainer.current.style.transform = `translateX(${230 + distance}px)`
         }
+
 
         if (movies.length <= 8) {
             if (directiom === "right" && sliderNumber < 2) {
                 setSliderNumber(sliderNumber += 1)
-                movieContainer.current.style.transform = `translateX(${-imageWidth + distance}px)`
+                movieContainer.current.style.transform = `translateX(${-230 + distance}px)`
             }
         }
         if (movies.length > 8) {
             if (directiom === "right" && sliderNumber < 6) {
                 setSliderNumber(sliderNumber += 1)
-                movieContainer.current.style.transform = `translateX(${-imageWidth + distance}px)`
+                movieContainer.current.style.transform = `translateX(${-230 + distance}px)`
             }
         }
     }
@@ -58,12 +53,12 @@ import { Link } from 'react-router-dom';
 
     return (
         <div className="movie-genre-container-with-scroll" onPointerEnter={handleSwitchOnEnter} onPointerLeave={handleSwitchOnLeave}>
-            <div className="movie-genre-container"  ref={movieContainer} >
-                <div className="movie-template" ref={movieTemplate}>
+            <div className="movie-genre-container" ref={movieContainer} >
+                <div className="movie-template" >
                      {movies.map(movie => {
-                        return <div className="movie-overall" key={movie.id} ref={movieImage}>
+                        return <div className="movie-overall" key={movie.id}>
                             <Link to={"/view/movie/" + movie.id}>
-                                <img src="../movimg.jpeg" alt={movie.name} />
+                                <img src={movie.image} alt={movie.name} />
                             </Link>
                             <div className='movie-information'>
                                 <div className="movie-name-year">

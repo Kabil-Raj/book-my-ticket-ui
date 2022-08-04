@@ -4,12 +4,13 @@ import './App.css';
 import BookMyTicketApp from './component/home/bookMyTicketApp';
 
 
-export default function App()  {
 
-    return (
-      <div className='App'>
-        <BookMyTicketApp />
-      </div>
-    );
+export default function App() {
+
+  return (
+    <div className='App'>
+      <BookMyTicketApp />
+    </div>
+  );
 
 }

@@ -9,7 +9,7 @@ function BannerSlider() {
   //     "https://thumbs.dreamstime.com/b/design-horizontal-ad-banner-pizzeria-pizzas-ingredients-colored-background-promo-template-italian-food-215909875.jpg"]
 
     return (
-      <Carousel interval={3000} className="bannerContainer">
+      <Carousel interval={3000}  className="bannerContainer">
         <Carousel.Item>
           <img
             className="d-block w-100 bannerImage"
@@ -28,7 +28,7 @@ function BannerSlider() {
         <Carousel.Item>
           <img
             className="d-block w-100 bannerImage"
-            src="https://thumbs.dreamstime.com/b/design-horizontal-ad-banner-pizzeria-pizzas-ingredients-colored-background-promo-template-italian-food-215909875.jpg"
+            src="https://cdn.winsightmedia.com/platform/files/public/2022-01/background/Pizza%20Hut%20Spicy%20Lover%27s%20.jpg?VersionId=1VYrobAdXdU9vvQpLkIjohLFByhXYbTj"
             alt="Third slide"
           />
         </Carousel.Item>

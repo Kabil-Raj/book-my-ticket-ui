@@ -4,12 +4,10 @@ export const book_my_ticket_url = ""
 
 const LOCAL_STORAGE_SESSION_ATTRIBUTE_NAME = "authenticatedUser"
 
-const api_url = "http://localhost:8887/user"
+const api_url = "http://localhost:80/user"
 
 
 class BookMyTicketLoginService {
-    
-
 
     authenticateUser(emailAddress, pwd) {
         console.log( emailAddress+ " " +pwd) 
@@ -17,10 +15,8 @@ class BookMyTicketLoginService {
             emailId: emailAddress,
             password: pwd
         }
-        return axios.post(api_url+"/login/", userCredential);
+        return axios.post(api_url+"/login", userCredential);
     }
-        
-
 
     registerSessionStorage(userName, token) {
         sessionStorage.removeItem(LOCAL_STORAGE_SESSION_ATTRIBUTE_NAME)
@@ -54,15 +50,27 @@ class BookMyTicketLoginService {
     }
 
     saveUserRegistration(values) {
-        const user = {
+        let user = {
             userName: values.username,
             dateOfBirth: values.dateOfBirth,
             contactNumber: values.contactNumber,
             emailId: values.emailAddress,
             password: values.password
         }
+        console.log(" user " +user)
+       return axios.post(api_url+"/signup", user)
+            
+    }
 
-       return axios.post(api_url+"/signup/", user)
+    bookTicket(movName, noOfTickets) {
+        const getUserName = sessionStorage.getItem(LOCAL_STORAGE_SESSION_ATTRIBUTE_NAME);
+        const ticketDetails = {
+            userName : getUserName,
+            movieName : movName,
+            numberOfTickets : noOfTickets
+        }
+
+        return axios.post(api_url+ "/book/ticket", ticketDetails)
             
     }
 
