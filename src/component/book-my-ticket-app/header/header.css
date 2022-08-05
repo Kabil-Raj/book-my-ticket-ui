@@ -1,0 +1,62 @@
+.header-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header-brand {
+    margin: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+.header-brand-name {
+   margin: 5px;
+   font-size: 30px;
+   color: whitesmoke;
+   font-weight: bolder;
+   cursor: pointer;
+   text-decoration-line: none;
+}
+
+.header-brand-name:hover {
+    color: whitesmoke;
+}
+
+.header-brand-searchbar {
+    margin-bottom: 3px;
+    margin-left: 30px;
+    border-radius: 10px;
+    width: 800px;
+    height: 40px;
+}
+
+
+.header-login-signup {
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: white;
+}
+
+.header-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-left: 10px;
+}
+
+.header-nav-item {
+    text-decoration: none;
+    margin-left: 10px;
+    color: white;
+    font-weight: bolder;
+}
+
+.header-nav-item:hover {
+    color: rgb(182, 179, 179);
+}

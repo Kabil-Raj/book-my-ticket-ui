@@ -2,6 +2,7 @@
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import authenticationService from '../../api/authentication-service';
+import "./header.css"
 
 const BookMyTicketHeader = () => {
 
@@ -23,21 +24,21 @@ const BookMyTicketHeader = () => {
 
         return (
             <div>
-             <nav className="navbar navbar-expand-lg navbar-dark bg-dark banner-header">
-                 <div className="container banner-name">
-                    <Link className="navbar-brand brand-name" to={'/'} ><img className="brandImage" src="https://img.icons8.com/glyph-neue/2x/movie-projector.png" alt="brand"/>bookMyTicket</Link>
-                     <input className='search-bar form-control' type='text' placeholder='Search For Movies, Events' />
+             <nav className="header-container">
+                 <div className="header-brand">
+                    <Link className="header-brand-name" to={'/'} ><img className="brandImage" src="https://img.icons8.com/glyph-neue/2x/movie-projector.png" alt="brand"/>bookMyTicket</Link>
+                     <input className="header-brand-searchbar" type='text' placeholder='Search For Movies, Events' />
                  </div>
-                 <div className="collapse navbar-collapse login-header" id="collapsibleNavId">
-                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                         {!isUserLogged && <li className="nav-item active">
-                             <Link className="nav-link" to={'/sign-in'} >Sign In</Link>
+                 <div className="header-login-signup">
+                     <ul className="header-nav">
+                         {!isUserLogged && <li className="">
+                             <Link className="header-nav-item" to={'/sign-in'} >Log in</Link>
                          </li>}
-                         {!isUserLogged && <li className="nav-item">
-                             <Link className="nav-link" to={'/sign-up'} >Sign Up</Link>
+                         {!isUserLogged && <li className="">
+                             <Link className="header-nav-item" to={'/sign-up'} >Register</Link>
                          </li>}
-                         {isUserLogged && <li className="nav-item active">
-                             <Link className="nav-link" to={'/'} onClick={handleLogOut}>Sign Out</Link>
+                         {isUserLogged && <li className="">
+                             <Link className="header-nav-item" to={'/'} onClick={handleLogOut}>Log out</Link>
                          </li>}
                      </ul>
                  </div>
