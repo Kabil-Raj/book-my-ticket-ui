@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import movieService from "../authentication/movie.service";
-import { MovieShowcase } from "./movies.showcase";
+import movieService from "../api/movie-service";
+import { MovieShowcase } from "./movie-showcase/movies.showcase";
+import "./bookMyTicket-movie.css"
 
 export default class Movie extends Component {
 
@@ -53,7 +54,7 @@ export default class Movie extends Component {
     render() {
         return (
 
-            <div className="all-movie">
+            <>
                 <div className="movie-genre-name">
                     <h2>Action Movies</h2>
                     <MovieShowcase movies={this.state.action} genreName={"Action"} />
@@ -78,7 +79,7 @@ export default class Movie extends Component {
                     <MovieShowcase movies={this.state.sci} genreName={"Scifi"} />
                 </div>
 
-            </div>
+            </>
         )
     }
 }

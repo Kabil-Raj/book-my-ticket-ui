@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
-import movieService from '../../authentication/movie.service';
-import authenticationService from '../../authentication/authentication.service';
-import { BookedPopUp } from './movie.booked.popup';
+import authenticationService from '../../api/authentication-service';
+import movieService from '../../api/movie-service';
+import { BookedPopUp } from './movie-booked-popup';
+import "./view-movie-details.css"
 
 
 function ViewMovie() {
@@ -77,7 +78,7 @@ function ViewMovie() {
         <>
             <div className="view-movie" style={{opacity}} >
                 <div className="movie-banner">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg" alt={movie.name} />
+                    <img src={movie.image} alt={movie.name} />
                     <div className="movie-banner-info">
                         <h2>{movie.name}</h2>
                         <h3><span>Genre: </span>{movie.genre}</h3>

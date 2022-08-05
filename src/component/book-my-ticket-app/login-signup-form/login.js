@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Alert } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
-import authenicationService from "../authentication/authentication.service";
+import authenticationService from "../../api/authentication-service";
+import "./bookMyTicket-form.css"
 
 
 
@@ -34,9 +35,9 @@ export default function Login() {
 
     const login = (e) => {
         e.preventDefault();
-        authenicationService.authenticateUser(emailAddress, password)
+        authenticationService.authenticateUser(emailAddress, password)
             .then(response => {
-                (authenicationService.registerSessionStorage(emailAddress, response.data))
+                (authenticationService.registerSessionStorage(emailAddress, response.data))
                 setIsUserLogged(true)
             })
             .catch(error => {
@@ -58,7 +59,7 @@ export default function Login() {
     }
     return (
         <div>
-            {!authenicationService.isUserLoggedIn() &&
+            {!authenticationService.isUserLoggedIn() &&
                 <div className="sign-in-container form-control border border-dark rounded">
                     {errorMessage &&
                         <Alert variant="danger">

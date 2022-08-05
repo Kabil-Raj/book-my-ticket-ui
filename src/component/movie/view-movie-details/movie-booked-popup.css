@@ -1,0 +1,37 @@
+.pop-overlay {
+    position: absolute;
+    width: 500px;
+    height: 340px;
+    margin-left: 40%;
+    margin-right: 50%;
+    top: 10%;
+    margin-top: 100px;
+    background-color: rgb(238, 238, 240);
+    display: flex;
+  }
+  
+  .pop-model {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(75, 71, 75);
+    color: #fff;
+  } 
+  
+  .pop-model span {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+  }
+  
+  .pop-overlay p {
+    text-align: center;
+    margin: 30px;
+    font-size: 30px;
+  }
+  
+  .pop-overlay button {
+    width: 100px;
+    align-self: center;
+  }
+  

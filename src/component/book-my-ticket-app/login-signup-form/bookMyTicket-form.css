@@ -1,0 +1,72 @@
+.sign-in-container,.sign-up-container {
+    align-items: center;
+    background-color: whitesmoke;
+    width: 500px;
+    margin-top: 200px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+  
+  }
+  
+  .sign-in-bar {
+    margin: auto;
+    width: 300px;
+    text-align: left;
+    font-weight: 600;
+    padding: 20px;
+  
+  }
+  
+  .sign-up-bar {
+    margin: auto;
+    width: 300px;
+    text-align: left;
+    font-weight: 600;
+    padding: 2px;
+  }
+  
+  
+  
+  .sign-up-bar span {
+    color: red;
+    font-size: 12px;
+    padding: 3px;
+    display: none;
+  }
+  
+  
+  input:invalid[focused="true"] {
+    border: 1px solid red;
+  }
+  
+  input:invalid[focused="true"]~ span {
+    display: block;
+  }
+  
+  
+  .signup {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .sign-up-container {
+    margin-top: 40px;
+  }
+  
+  .register-btn {
+    margin: 20px;
+  }
+  
+  .sign-in-label, .sign-up-label {
+    margin-bottom: 10px;
+  }
+  
+  .sign-in-check-box {
+    margin-left: 10px;
+  }
+  
+  .forgot-password-text {
+    text-align: right;
+  }

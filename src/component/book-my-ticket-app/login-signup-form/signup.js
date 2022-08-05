@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import BookMyTicketLoginService from "../authentication/authentication.service";
 import { Alert } from 'react-bootstrap';
 import FormInput from './FormInput';
+import "./bookMyTicket-form.css"
+import authenticationService from '../../api/authentication-service';
 
 
 export default class SignUp extends Component {
@@ -24,7 +25,7 @@ export default class SignUp extends Component {
 
     handleSingUp = (event) => {
         event.preventDefault();
-            BookMyTicketLoginService.saveUserRegistration(this.state)
+            authenticationService.saveUserRegistration(this.state)
             .then(response => {
                 if (response.status === 200) {
                     this.setState({

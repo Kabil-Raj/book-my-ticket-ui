@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Event from '../events/event.component';
-import Movie from '../movie/movie';
-import ViewMovie from '../movie/view_movie/view.movie';
-import Header from './header';
-import Login from './login';
-import MainHeader from './main.header';
-import SignUp from './signup';
+import BookMyTicketEvents from '../events/bookMyTicket-events';
+import Movie from '../movie/bookMyTicket-movie';
+import ViewMovie from '../movie/view-movie-details/view.movie-details';
+import Home from './bookMyTIcket-home';
+import BookMyTicketHeader from './header/bookMyTicket-header';
+import Login from './login-signup-form/login';
+import SignUp from './login-signup-form/signup';
 
 class BookMyTicketApp extends Component {
     render() {
         return (
             <Router>
-                <MainHeader />
+                <BookMyTicketHeader />
                 <Routes>
-                    <Route path="/" element={<Header />}></Route>
+                    <Route path="/" element={<Home />}></Route>
                     <Route path="/sign-in" element={<Login />}></Route>
                     <Route path="/sign-up" element={<SignUp />}></Route>
                     <Route path="/explore/movies" element={<Movie />}></Route>
-                    <Route path="/explore/events" element={<Event />}></Route>
+                    <Route path="/explore/events" element={<BookMyTicketEvents />}></Route>
                     <Route path="/view/movie/:movieId" element={<ViewMovie />}></Route>
                 </Routes>
             </Router>

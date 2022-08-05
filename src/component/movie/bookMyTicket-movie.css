@@ -1,0 +1,17 @@
+.movie-genre-name{
+    width: 100%;
+    color: #fff;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  
+  .movie-genre-name h2 {
+    text-align: left;
+    margin-top: 10px;
+    align-self: center;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: large;
+    font-weight: bolder;
+  }

@@ -1,18 +1,14 @@
 import Carousel from "react-bootstrap/Carousel";
+import "./promotion-slider.css"
 
 
-function BannerSlider() {
-
-  // const bannerImages =
-  //   ["https://wallpaperaccess.com/full/3143584.jpg",
-  //     "https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-thickened-big-burger-promotion-simple-banner-image_196612.jpg",
-  //     "https://thumbs.dreamstime.com/b/design-horizontal-ad-banner-pizzeria-pizzas-ingredients-colored-background-promo-template-italian-food-215909875.jpg"]
+function PromotionSlider() {
 
     return (
-      <Carousel interval={3000}  className="bannerContainer">
+      <Carousel interval={3000}  className="promotion-container">
         <Carousel.Item>
           <img
-            className="d-block w-100 bannerImage"
+            className="d-block w-100 promotion-image"
             src="https://wallpaperaccess.com/full/3143584.jpg"
   
             alt="First slide"
@@ -20,14 +16,14 @@ function BannerSlider() {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100 bannerImage"
+            className="d-block w-100 promotion-image"
             src="https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-thickened-big-burger-promotion-simple-banner-image_196612.jpg"
             alt="Second slide"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100 bannerImage"
+            className="d-block w-100 promotion-image"
             src="https://cdn.winsightmedia.com/platform/files/public/2022-01/background/Pizza%20Hut%20Spicy%20Lover%27s%20.jpg?VersionId=1VYrobAdXdU9vvQpLkIjohLFByhXYbTj"
             alt="Third slide"
           />
@@ -38,4 +34,4 @@ function BannerSlider() {
  
 }
 
-export default BannerSlider;
+export default PromotionSlider;

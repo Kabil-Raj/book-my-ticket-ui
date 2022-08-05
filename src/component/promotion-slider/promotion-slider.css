@@ -1,0 +1,8 @@
+.promotion-container{
+    margin: 5px;
+  }
+  
+  .promotion-image {
+    height: 400px;
+    object-fit: cover;
+  }

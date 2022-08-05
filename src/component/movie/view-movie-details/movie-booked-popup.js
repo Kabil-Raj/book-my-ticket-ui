@@ -1,5 +1,5 @@
 
-
+import "./movie-booked-popup.css"
 
 export const BookedPopUp = ({ open, description, onClose }) => {
     if (!open) return null;

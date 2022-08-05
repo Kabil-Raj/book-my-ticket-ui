@@ -1,8 +1,9 @@
+
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
-import authenticationService from '../authentication/authentication.service';
+import authenticationService from '../../api/authentication-service';
 
-const MainHeader = () => {
+const BookMyTicketHeader = () => {
 
     const [isUserLogged, setIsUerLogged] = useState(false);
 
@@ -45,4 +46,4 @@ const MainHeader = () => {
         )
 }
 
-export default MainHeader;
+export default BookMyTicketHeader;

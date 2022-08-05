@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 
 
-export default class Event extends Component {
+export default class BookMyTicketEvents extends Component {
     render() {
         return (
             <div>

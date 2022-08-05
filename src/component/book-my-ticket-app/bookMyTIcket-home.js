@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import BannerSlider from "../banner-slider/banner.slider";
-import NavigateHeader from "./navigate.header";
-import movieService from "../authentication/movie.service";
-import { MovieShowcase } from "../movie/movies.showcase";
+import BannerSlider from "../promotion-slider/promotion.slider";
+import NavigateHeader from "./nav-folder/nav-header";
+import movieService from "../api/movie-service";
+import { MovieShowcase } from "../movie/movie-showcase/movies.showcase";
 
 
-class Header extends Component {
+class Home extends Component {
 
 
     constructor(props) {
@@ -39,4 +39,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default Home;
