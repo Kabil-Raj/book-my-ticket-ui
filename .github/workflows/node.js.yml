@@ -34,7 +34,6 @@ jobs:
   # push_to_Docker_Hub:
 
     runs-on: ubuntu-latest
-    needs: [ build ]
 
     steps:
 
