@@ -52,8 +52,8 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v3
       with:
-        context: ./
-        file: ./Dockerfile
+        context: ../
+        file: ../Dockerfile
         push: true
         tags: kabilapplications/book-my-ticket-ui:1.0
 
