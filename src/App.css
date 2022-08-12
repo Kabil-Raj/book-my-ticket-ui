@@ -1,45 +1,11 @@
 .App {
-  text-align: center;
   background-color: rgb(51, 55, 64);
   height: auto;
-  justify-content: center;
 }
 
 body {
-  justify-content: center;
   background-color: rgb(51, 55, 64);
   width: auto;
-}
-
-.banner-header {
-  display: flex;
-  flex-direction: row;
-  margin-right: 0px;
-}
-
-
-.login-header { 
-  margin-left: 400px;
-  align-self: center;
-}
-
-.brand-name {
-  width: 500px;
-  /* margin-right: 100%; */
-  margin-left: 0%;
-}
-
-.brandImage {
-  background-color: #fff;
-  border-radius: 30%;
-  margin: 10px;
-  height: 40px;
-}
-
-.search-bar {
-  margin-left: 1%;
-  justify-content: center;
-  width: 500px;
 }
 
 .nav-header {
@@ -51,9 +17,4 @@ body {
 .nav-header-name {
   color: cornsilk;
   font-size: medium;
-}
-
-.headerButton {
-  background-color: #212529;
-  border: none;
 }
