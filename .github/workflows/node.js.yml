@@ -55,5 +55,5 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tag: kabilapplications/book-my-ticket-ui:1.0
+        tags: kabilapplications/book-my-ticket-ui:1.0
 
