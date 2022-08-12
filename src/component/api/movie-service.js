@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api_url = "http://localhost:80/movies"
+const api_url = "http://bmt-api-gateway:80/movies"
 
 
 class MovieService {

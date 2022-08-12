@@ -4,7 +4,7 @@ export const book_my_ticket_url = ""
 
 const LOCAL_STORAGE_SESSION_ATTRIBUTE_NAME = "authenticatedUser"
 
-const api_url = "http://localhost:80/user"
+const api_url = "http://bmt-api-gateway:80/user"
 
 
 class BookMyTicketLoginService {
